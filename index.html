@@ -37,19 +37,96 @@
 			background-position: 50% 50%;
 		    background-repeat: no-repeat;
 		    border-radius: 50%;
+		    border-color:#FF5D01;
 		    width: 100px;
 		    height: 100px;
+		    border-style:solid;
+		    border-width:0.05em;
 		}
 		li{
 			list-style-type:none;
 			text-align:left;
 		}
-		li.category{
+		div.learn-more.row{
 			margin-top:15px;
+		}
+		div.category > p{
+			text-align:left;
 		}
 		p.social-icons > a{
 			margin-left:10px;
 		}
+
+		/* On button hover, give a border color*/ 
+		.btn:hover{
+			border-color:#FF5D01;
+		}
+
+		/* On nav hover, and active nav, give the bottom border an orange*/
+		ul.masthead-nav > li > a:hover,
+		ul.masthead-nav > li.active > a,
+		ul.masthead-nav > li.active > a:hover
+		{
+			border-bottom-color: #FF5D01;
+		}
+
+		.btn:hover,								/* all button hovers */
+		i.fa-spinner,							/* Spinner on more info load */
+		ul.masthead-nav > li > a:hover,			/* Hover on top nav element changes to orange */
+		p.social-icons > a:hover > i:before { 	/* all icons change to orange on hover */
+			color:#FF5D01;
+		}
+
+		p.social-icons > a:hover > i { /*Make social icons bigger on hover*/
+			font-size:50px;
+		}
+		/* No underline on hover */
+		p.social-icons > a:hover{
+			text-decoration:none;
+		}
+
+		div.category > i{
+			background-color:#fff;
+			color: #FF5D01;
+			padding:25px;
+			border-radius:50%;
+			margin-bottom:10px;
+		}
+
+		div.category ul li{
+			margin-top:10px;
+			text-align:center;
+		}
+
+		div.category ul li.cta{
+			 margin-top:15px;
+			 text-align:center;
+		}
+		
+		div.category > ul > li > i{
+			display:none;
+		}
+
+		div.category hr{
+			margin:0px;
+			border-color: #FF5D01;
+		}
+		div.category{
+			margin-top:30px;
+		}
+		@media (min-width: 992px) {
+			div.category ul li{
+				text-align:left;
+			}
+			div.category ul li i{
+				display:inline-block;
+			}
+		}
+		
+		.fa-ul{
+			margin-left:0;
+		}
+
 	</style>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.1.min.js"></script>
@@ -59,24 +136,19 @@
 				$("h2.description").fadeIn(1500, function(){
 					setTimeout(function(){
 						$("button.learn-more").fadeIn(1500);
-					}, 3000);
+					}, 1000);
 				});
-			}, 3000);
+			}, 1000);
 			
 			$("button.learn-more").click(function(){
 				$(this).hide(0, function(){
 					$("i.learn-more").fadeIn("slow", function(){
 						$("i.learn-more").fadeOut("slow", function(){
 							$("a.learn-more").css('display', 'inline-block');
-							$("ul.learn-more").fadeIn("slow");
+							$("div.learn-more").fadeIn("slow");
 						});
 					});
 				});
-			});
-
-			//TODO: on hover change the social icons, and the buttons as well!
-			$("p.social-icons > a").hover(function(){
-				$(this).children('i').addClass('fa-inverse');
 			});
 		});
 	</script>
@@ -88,9 +160,12 @@
     <![endif]-->
   </head>
   <body>
+
 	 <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
+
+      	<a href="https://www.github.com/riprap"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
 
         <div class="cover-container">
 
@@ -114,42 +189,75 @@
             <a href="contact" class="btn btn-lg btn-default learn-more"><i class="fa fa-envelope"></i>  Contact Me</a>
             <br/>
             <i class="fa fa-spinner fa-spin fa-5x learn-more"></i>
-            <ul class="learn-more">
-            	<li class="category">Software Development
-            		<ul>
-		            	<li>3 years professional web development experience in PHP, MySQL, Javascript, and HTML/CSS</li>
-		            	<li>Freelance development experience in <i class="fa fa-wordpress"></i>Wordpress</li>
-		            	<li>Professional experience with Python and Postgresql</li>
-		            	<li>Working knowledge of Ruby on Rails</li>
-		            	<li><a href="portfolio" class="btn btn-xs btn-default"><i class="fa fa-folder-open"></i> View some of my work</a></li>
-		            </ul>
-		        </li>
-		        <li class="category">Personal
-	            	<ul>
-	            		<li>
-	            			<ul>
-	            				<li>Rec league soccer</li>
-	            				<li>Pick up basketball</li>
-	            			</ul>
+            <div class="learn-more row">
+	            <div class="category col-md-5">
+	            	<i class="fa fa-laptop fa-4x"></i>
+	            	<h3>Software Development</h3>
+	            	<hr>
+	            	<ul class="fa-ul">
+	            		<li><i class="fa-li fa fa-check-square"></i>
+	            			3 years professional web development experience in PHP, MySQL, Javascript, and HTML/CSS
 	            		</li>
-	            		<li>Fanhood
-	            			<ul>
-			            		<li>Liverpool FC</li>
-			            		<li>I refuse to believe anyone can beat me at FIFA 14</li>
-			            		<li>Toronto Raptors</li>
-			            		<li>Toronto Blue Jays</li>
-			            		<li>Toronto Maple Leafs</li>
-			            	</ul>
-			            </li>
-			        </ul>
-	            </li>
-            </ul>
+	            		<li><i class="fa-li fa fa-check-square"></i>
+	            			Object-oriented development (extensive use of Zend 1.12 and Symfony 1.4 PHP MVC Frameworks. Computer Programmer Analyst background)
+	            		</li>
+	            		<li><i class="fa-li fa fa-wordpress"></i>
+	            			Freelance development experience in Wordpress</i>
+	            		</li>
+	            		<li><i class="fa-li fa fa-check-square"></i>
+	            			Professional experience with Python and Postgresql
+	            		</li>
+	            		<li><i class="fa-li fa fa-check-square"></i>
+	            			Working knowledge of Ruby on Rails
+	            		</li>
+	            		<li class="cta">
+	            			<a href="portfolio" class="btn btn-sm btn-default"><i class="fa fa-folder-open"></i> View some of my work</a>	            			
+	            		</li>
+	            	</ul>
+	            </div>
+	            <div class="col-md-2"></div>
+	            <div class="category col-md-5">
+	            	<i class="fa fa-child fa-4x"></i>
+	            	<h3>Personal</h3>
+	            	<hr>
+	            	<ul class="fa-ul">
+	            		<li><i class="fa-li fa fa-check-square"></i>
+	            			Adult leaguer (soccer and basketball)
+	            		</li>
+	            		<li><i class="fa-li fa fa-gamepad"></i>
+	            			I refuse to believe anyone can beat me at FIFA 14
+	            		</li>
+	            		<li><i class="fa-li fa fa-check-square"></i>
+	            			Liverpool FC and Toronto Sports (Raptors > Blue Jays > Maple Leafs)
+	            		</li>
+	            		<li class="cta">
+	            			<a href="https://www.twitter.com/nolanknill" class="btn btn-sm btn-default"><i class="fa-li fa fa-twitter"></i>Daily Thoughts</a>	            			
+	            		</li>
+	            	</ul>
+	            </div>
+	        </div>
           </div>
 
 
           <div class="mastfoot">
             <div class="inner">
-              <p class="social-icons"><a href="https://www.twitter.com/nolanknill"><i class="fa fa-twitter-square fa-3x"></i></a> <a href="http://www.github.com/riprap"><i class="fa fa-github-square fa-3x"></i></a> <a href="https://www.linkedin.com/profile/view?id=236671732"><i class="fa fa-linkedin-square fa-3x"></i></a></p>
+              <p class="social-icons">
+              	<a title="View Twitter Timeline" href="https://www.twitter.com/nolanknill">
+              		<i class="fa fa-twitter-square fa-3x"></i>
+              	</a> 
+              	<a title="View Github Profile" href="http://www.github.com/riprap">
+              		<i class="fa fa-github-square fa-3x"></i>
+              	</a> 
+              	<a title="View Linkedin Profile" href="https://www.linkedin.com/profile/view?id=236671732">
+              		<i class="fa fa-linkedin-square fa-3x"></i>
+              	</a>
+              	<a title="View Steam Profile" href="http://steamcommunity.com/profiles/76561198050807637">
+              		<i class="fa fa-steam-square fa-3x"></i>
+              	</a>
+              	<a title="View stackoverflow Profile" href="http://stackoverflow.com/users/1281127/nolan-knill">
+              		<i class="fa fa-stack-overflow fa-3x"></i>
+              	</a>
+              </p>
             </div>
           </div>
 
