@@ -16,28 +16,18 @@
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
     <style>
-	    #portfolio{
-	    	margin-top:50px;
-	    	display:none;
-	    }
-
-	    #portfolio a{
-	    	text-decoration: underline;
-	    }
-
-	    #portfolio > ul > li{
-	    	margin-bottom:10px;
-	    }
 		div.site-wrapper { 
 			background: url(images/ocean-background.jpg); 
 			font-family: 'Open Sans', sans-serif;
 		}
-		.learn-more, .view-portfolio{
+		.learn-more{
 			display:none;
-			margin-top:10px;
 		}
 		button, a.btn{
 			font-family: 'Open Sans Semibold', sans-serif;
+		}
+		.learn-more{
+			margin-top:10px;
 		}
 		h2.description{
 			display:none;
@@ -148,7 +138,6 @@
 				$("h2.description").fadeIn(1500, function(){
 					setTimeout(function(){
 						$("button.learn-more").fadeIn(1500);
-						$("button.view-portfolio").fadeIn(1500);
 					}, 1000);
 				});
 			}, 1000);
@@ -162,12 +151,6 @@
 						});
 					});
 				});
-			});
-			$(".view-portfolio").click(function(){
-				$("div#portfolio").fadeIn("slow");
-				$("ul.nav li.active").removeClass('active');
-				$("ul.nav > li > a.view-portfolio").parent("li").addClass('active');
-				$('button.view-portfolio').hide();
 			});
 		});
 	</script>
@@ -184,6 +167,8 @@
 
       <div class="site-wrapper-inner">
 
+      	<a href="https://www.github.com/riprap"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+
         <div class="cover-container">
 
           <div class="masthead clearfix">
@@ -192,7 +177,9 @@
               <h3 class="masthead-brand"></h3>
               <ul class="nav masthead-nav">
                 <li class="active"><a href="#top">Home</a></li>
-                <li><a href="#portfolio" class="view-portfolio">Portfolio</a></li>
+                <li><a href="portfolio">Portfolio</a></li>
+                <li><a href="hire">Hire</a></li>
+                <li><a href="contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -202,7 +189,6 @@
             <h2 class="description">Web Developer and Sports Geek</h2>
             
             <button class="btn btn-lg btn-default learn-more">Learn More</button>
-            <button class="btn btn-lg btn-default view-portfolio">View Portfolio</button>
             <a href="contact" class="btn btn-lg btn-default learn-more"><i class="fa fa-envelope"></i>  Contact Me</a>
             <br/>
             <i class="fa fa-spinner fa-spin fa-5x learn-more"></i>
@@ -228,7 +214,7 @@
 	            			Working knowledge of Ruby on Rails
 	            		</li>
 	            		<li class="cta">
-	            			<a href="#portfolio" class="btn btn-sm btn-default"><i class="fa fa-folder-open"></i> &nbsp; View some of my work</a>	            			
+	            			<a href="portfolio" class="btn btn-sm btn-default"><i class="fa fa-folder-open"></i> &nbsp; View some of my work</a>	            			
 	            		</li>
 	            	</ul>
 	            </div>
@@ -254,53 +240,6 @@
 	            </div>
 	        </div>
           </div>
-
-
-		<div id="portfolio">
-        	<a name="portfolio"></a>
-        	<h2>Portfolio</h2>
-        	<ul>
-        		<li>
-        			<a href="http://www.survey-ninja.com">Survey-Ninja.com</a>
-        			<ul>
-        				<li>Site where users have the ability to take surveys, create surveys, save surveys, view results of surveys. Includes user authentication.
-        			 	<li>PHP project</li>
-        			 	<li>View code: <a href="http://www.github.com/riprap/Survey-Ninja"> Github Repo</a></li>
-        			 	<li>Currently being redone in Ruby on Rails: <a href="http://www.github.com/riprap/Survey-Ninja-Rails">Github Repo</a></li>
-        			 </ul>
-        		 </li>
-        		 <li>
-        		 	<a href="http://achimota-centre.herokuapp.com">Achimota Centre for Children with Autism</a>
-        		 	<ul>
-        		 		<li>Ruby on Rails project for the course Systems Project (8-months)</li>
-        		 		<li>Achimota Centre came to us with a problem when trying to save student's learning progress. This app helps teachers store and view progress of students in their programs.</li>
-        		 		<li>Full CRUD on students, test scores, progress</li> 
-        		 		<li>Private git repo used for collaboration of 4-person team</li>
-        		 	</ul>
-        		 <li>
-        		 	<a href="http://www.nutrafarms.ca">Nutrafarms.ca</a>
-        		 	<ul>
-        		 		<li>Freelance project done in Wordpress, using PHP/MySQL, Javascript, HTML/CSS</li>
-        		 	</ul>
-        		 </li>
-        		 <li>
-        		 	<a href="http://github.com/riprap/project-euler">Project Euler</a>
-        		 	<ul>
-        		 		<li>To expand my knowledge of Python, I completed 30 problems from the Project Euler problem set</li>
-        		 		<li>Problem set can be found at <a href="http://projecteuler.net/problems">www.projecteuler.net/problems</a></li>
-        		 		<li>View code: <a href="http://github.com/riprap/project-euler">Github Repo</a></li>
-        		 	</ul>		
-        		 </li>
-        		 <li>
-        		 	<a href="http://github.com/riprap/planet-defence">Planet Defence</a>
-        		 	<ul>
-        		 		<li>Video game made in Python</li>
-        		 		<li>View code: <a href="http://github.com/riprap/planet-defence">Github Repo</a></li>
-        		 	</ul>
-        		 </li>
-        	</ul>
-        </div>
-
 
 
           <div class="mastfoot">

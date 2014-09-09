@@ -135,10 +135,7 @@ body {
     position: fixed;
     top: 0;
   }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
+
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
@@ -149,6 +146,14 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+
+  .inner.cover{
+    padding-top:100px;
+  }
+
+  .masthead-brand{
+    margin-left:70px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -156,5 +161,9 @@ body {
   .mastfoot,
   .cover-container {
     width: 700px;
+  }
+
+  .masthead-brand{
+    margin-left:0;
   }
 }
