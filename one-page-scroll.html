@@ -15,8 +15,16 @@
     <link rel="stylesheet" href="css/onepage-scroll.css">
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
-    <style>
-
+    <style>	
+    	#intro{
+    		background: url(images/ocean-background.jpg);
+    	}
+    	#contact{
+    		background: url(images/orange-background.jpg);
+    	}
+    	#portfolio{
+    		background: url(images/white-background.jpg);
+    	}
 	</style>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.1.min.js"></script>
@@ -25,14 +33,17 @@
 		$(document).ready(function(){
 
 			$(".main").onepage_scroll({
-			   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-			   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+			   sectionContainer: "section",     // sectionContainer accepts any kind of selecto in case you don't want to use section
+			   easing: "ease-in-out",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
 			                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-			   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+			   animationTime: 1500,             // AnimationTime let you define how long each section takes to animate
 			   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
 			   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
 			   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-			   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+			   afterMove: function(index) {
+			   	
+
+			   },   // This option accepts a callback function. The function will be called after the page moves.
 			   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
 			   keyboard: true,                  // You can activate the keyboard controls
 			   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
@@ -43,8 +54,6 @@
 
 		});
 	</script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -52,8 +61,15 @@
   </head>
 	  <body>
 	  <div class="main">
-	    <section>FIRST SECTION</section>
-	    <section>SECOND SECTION</section>
+	    <section id="intro">
+	    	<h1>Nolan Knill</h1>
+	    </section>
+	    <section id="contact">
+	    	SECOND SECTION
+	    </section>
+	    <section id="portfolio">
+	    	THIRD SECTION
+	    </section>
 	  </div>
 	  <script src="js/bootstrap.min.js"></script>
   </body>

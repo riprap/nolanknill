@@ -1,0 +1,145 @@
+.fadeIn {
+	display:none;
+}
+.main {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+}
+
+section {
+	background-color:#e67e22;
+	display: table-cell;
+	vertical-align: top;
+	color: #000;
+}
+section.dark
+{ 
+	background: url(/images/ocean-background.jpg); 
+	color: #fff;
+}
+
+#scroll-down {
+	width:100%;
+	position: absolute;
+	bottom:20px;
+}
+
+.onepage-pagination li a:before {
+	background: rgba(255,255,255,0.85);
+}
+.onepage-pagination li a.active:before {
+	background: transparent;
+	border: 1px solid #fff;
+}
+
+.masthead-brand h1 {
+	margin-top:10px;
+	margin-bottom:0px;
+	font-size:2em;
+}
+
+h1, h2{
+	font-weight:300;
+}
+
+#intro > button {
+	margin:25px 0;
+}
+
+.masthead-brand div{
+	background-image: url(/images/headshot-small.png);
+	background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+    border-radius: 50%;
+    border-color:#e67e22;
+    width: 100px;
+    height: 100px;
+    border-style:solid;
+    border-width:0.2em;
+}
+
+li{
+	list-style-type:none;
+	text-align:left;
+}
+div.learn-more.row{
+	margin-top:15px;
+}
+div.category > p{
+	text-align:left;
+}
+p.social-icons > a{
+	margin-left:10px;
+}
+
+/* On button hover, give a border color*/ 
+.btn:hover{
+	border-color:#e67e22;
+}
+
+/* On nav hover, and active nav, give the bottom border an orange*/
+ul.masthead-nav > li > a:hover,
+ul.masthead-nav > li.active > a,
+ul.masthead-nav > li.active > a:hover
+{
+	border-bottom-color: #e67e22;
+}
+
+.btn:hover,								/* all button hovers */
+i.fa-spinner,							/* Spinner on more info load */
+ul.masthead-nav > li > a:hover,			/* Hover on top nav element changes to orange */
+p.social-icons > a:hover > i:before { 	/* all icons change to orange on hover */
+	color:#e67e22;
+}
+
+p.social-icons > a:hover > i { /*Make social icons bigger on hover*/
+	font-size:50px;
+}
+/* No underline on hover */
+p.social-icons > a:hover{
+	text-decoration:none;
+}
+
+div.category > i{
+	background-color:#fff;
+	color: #e67e22;
+	padding:25px;
+	border-radius:50%;
+	margin-bottom:10px;
+}
+
+div.category ul li{
+	margin-top:10px;
+	text-align:center;
+}
+
+div.category ul li.cta{
+	 margin-top:15px;
+	 text-align:center;
+}
+
+div.category > ul > li > i{
+	display:none;
+}
+
+div.category hr{
+	margin:0px;
+	border-color: #e67e22;
+}
+div.category{
+	margin-top:30px;
+}
+@media (min-width: 992px) {
+	div.category ul li{
+		text-align:left;
+	}
+	div.category ul li i{
+		display:inline-block;
+	}
+}
+
+.fa-ul{
+	margin-left:0;
+}

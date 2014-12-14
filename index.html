@@ -6,257 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nolan Knill</title>
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     
     <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet">
-    <style>
-	    #portfolio{
-	    	margin-top:50px;
-	    	display:none;
-	    }
-
-	    #portfolio a{
-	    	text-decoration: underline;
-	    }
-
-	    #portfolio > ul > li{
-	    	margin-bottom:10px;
-	    }
-		div.site-wrapper { 
-			background: url(images/ocean-background.jpg); 
-			font-family: 'Open Sans', sans-serif;
-		}
-		.learn-more, .view-portfolio{
-			display:none;
-			margin-top:10px;
-		}
-		button, a.btn{
-			font-family: 'Open Sans Semibold', sans-serif;
-		}
-		h2.description{
-			display:none;
-		}
-		h3.masthead-brand{
-			background-image: url(images/headshot-small.png);
-			background-position: 50% 50%;
-		    background-repeat: no-repeat;
-		    -webkit-border-radius: 50%;
-			-moz-border-radius: 50%;
-		    border-radius: 50%;
-		    border-color:#FF5D01;
-		    width: 100px;
-		    height: 100px;
-		    border-style:solid;
-		    border-width:0.05em;
-		}
-		li{
-			list-style-type:none;
-			text-align:left;
-		}
-		div.learn-more.row{
-			margin-top:15px;
-		}
-		div.category > p{
-			text-align:left;
-		}
-		p.social-icons > a{
-			margin-left:10px;
-		}
-
-		/* On button hover, give a border color*/ 
-		.btn:hover{
-			border-color:#FF5D01;
-		}
-
-		/* On nav hover, and active nav, give the bottom border an orange*/
-		ul.masthead-nav > li > a:hover,
-		ul.masthead-nav > li.active > a,
-		ul.masthead-nav > li.active > a:hover
-		{
-			border-bottom-color: #FF5D01;
-		}
-
-		.btn:hover,								/* all button hovers */
-		i.fa-spinner,							/* Spinner on more info load */
-		ul.masthead-nav > li > a:hover,			/* Hover on top nav element changes to orange */
-		p.social-icons > a:hover > i:before { 	/* all icons change to orange on hover */
-			color:#FF5D01;
-		}
-
-		p.social-icons > a:hover > i { /*Make social icons bigger on hover*/
-			font-size:50px;
-		}
-		/* No underline on hover */
-		p.social-icons > a:hover{
-			text-decoration:none;
-		}
-
-		div.category > i{
-			background-color:#fff;
-			color: #FF5D01;
-			padding:25px;
-			border-radius:50%;
-			margin-bottom:10px;
-		}
-
-		div.category ul li{
-			margin-top:10px;
-			text-align:center;
-		}
-
-		div.category ul li.cta{
-			 margin-top:15px;
-			 text-align:center;
-		}
-		
-		div.category > ul > li > i{
-			display:none;
-		}
-
-		div.category hr{
-			margin:0px;
-			border-color: #FF5D01;
-		}
-		div.category{
-			margin-top:30px;
-		}
-		@media (min-width: 992px) {
-			div.category ul li{
-				text-align:left;
-			}
-			div.category ul li i{
-				display:inline-block;
-			}
-		}
-		
-		.fa-ul{
-			margin-left:0;
-		}
-
-	</style>
+    <link href="/css/cover.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/onepage-scroll.css">
+    <link href="/css/style.css" rel="stylesheet">
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/jquery.onepage-scroll.min.js"></script>
 	<script>
 		$(document).ready(function(){
+			$(".main").onepage_scroll({
+			   sectionContainer: "section",
+			   easing: "ease",
+			   animationTime: 1250,
+			   pagination: true,
+			   updateURL: false,
+			   beforeMove: function(index) {},
+			   afterMove: function(index) {
+			   	var hotSection = $("section[data-index='"+index.toString()+"']"); 
+			   	if (hotSection.hasClass('dark')) {
+			   		$(".onepage-pagination").addClass('darkNav');
+			   	} else {
+			   		$(".onepage-pagination").removeClass('darkNav');
+			   	}
+			   },
+			   loop: false, 
+			   keyboard: true, 
+			   responsiveFallback: false, 
+			   direction: "vertical"
+			});
+
+			$(".onepage-pagination").addClass('darkNav');
+
 			setTimeout(function(){
-				$("h2.description").fadeIn(1500, function(){
+				$(".fadeIn-one").fadeIn(2000, function(){
 					setTimeout(function(){
-						$("button.learn-more").fadeIn(1500);
-						$("button.view-portfolio").fadeIn(1500);
-					}, 1000);
+						$("#scroll-down").css('color', '#e67e22');
+						$(".fadeIn-two").fadeIn(2000);
+					}, 3000);
 				});
 			}, 1000);
+
+			$("#thats-nice").click(function(){
+				$(".thats-nice").fadeIn(1500);
+			});
 			
-			$("button.learn-more").click(function(){
-				$(this).hide(0, function(){
-					$("i.learn-more").fadeIn("slow", function(){
-						$("i.learn-more").fadeOut("slow", function(){
-							$("a.learn-more").css('display', 'inline-block');
-							$("div.learn-more").fadeIn("slow");
-						});
-					});
-				});
-			});
-			$(".view-portfolio").click(function(){
-				$("div#portfolio").fadeIn("slow");
-				$("ul.nav li.active").removeClass('active');
-				$("ul.nav > li > a.view-portfolio").parent("li").addClass('active');
-				$('button.view-portfolio').hide();
-			});
+
 		});
 	</script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+	<body>
+	  <div class="main">
+	    <section id="intro" class="dark">
+	    	<div class="masthead clearfix">
+		        <div class="inner">
+		          <div class="masthead-brand">
+		          	<div></div>
+		          	<h1>Nolan Knill</h1>
+		          </div>
+		          
+		          <ul class="nav masthead-nav">
+		            <li><a href="/#5">Contact</a></li>
+		            <li><a href="/blog">Blog</a></li>
+		          </ul>
+		        </div>
+		      </div>
 
-	 <div class="site-wrapper">
+	    	<h2 class="cover-heading">Hi, I'm Nolan Knill</span></h2>
+            <h2 class="title fadeIn fadeIn-one">Web Developer Extraordinaire</h2>
+            <button id="thats-nice" class="btn btn-lg btn-default fadeIn fadeIn-two">That's nice...</button>
+            <p class="fadeIn thats-nice">You think so? Continue to the fun stuff by scrolling down.</p>
 
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-
-              <h3 class="masthead-brand"></h3>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="#top">Home</a></li>
-                <li><a href="#portfolio" class="view-portfolio">Portfolio</a></li>
-              </ul>
+            <div id="scroll-down">
+	            <i class="fa fa-2x fa-chevron-down"></i>
+	            <p>Scroll down</p>
             </div>
-          </div>
+	    </section>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Hi, I'm Nolan Knill.</h1>
-            <h2 class="description">Web Developer and Sports Geek</h2>
-            
-            <button class="btn btn-lg btn-default learn-more">Learn More</button>
-            <button class="btn btn-lg btn-default view-portfolio">View Portfolio</button>
-            <i class="fa fa-spinner fa-spin fa-5x learn-more"></i>
-            <div class="learn-more row">
-	            <div class="category col-md-5">
-	            	<i class="fa fa-laptop fa-4x"></i>
-	            	<h3>Software Development</h3>
-	            	<hr>
-	            	<ul class="fa-ul">
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			3 years professional web development experience in PHP, MySQL, Javascript, and HTML/CSS
-	            		</li>
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Object-oriented development (extensive use of Zend 1.12 and Symfony 1.4 PHP MVC Frameworks. Computer Programmer Analyst background)
-	            		</li>
-	            		<li><i class="fa-li fa fa-wordpress"></i>
-	            			Freelance development experience in Wordpress</i>
-	            		</li>
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Professional experience with Python and Postgresql
-	            		</li>
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Working knowledge of Ruby on Rails
-	            		</li>
-	            		<li class="cta">
-	            			<a href="#portfolio" class="btn btn-sm btn-default"><i class="fa fa-folder-open"></i> &nbsp; View some of my work</a>	            			
-	            		</li>
-	            	</ul>
-	            </div>
-	            <div class="col-md-2"></div>
-	            <div class="category col-md-5">
-	            	<i class="fa fa-child fa-4x"></i>
-	            	<h3>Personal</h3>
-	            	<hr>
-	            	<ul class="fa-ul">
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Adult leaguer (soccer and basketball)
-	            		</li>
-	            		<li><i class="fa-li fa fa-gamepad"></i>
-	            			I refuse to believe anyone can beat me at FIFA 14
-	            		</li>
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Liverpool FC and Toronto Sports (Raptors > Blue Jays > Maple Leafs)
-	            		</li>
-	            		<li class="cta">
-	            			<a href="https://www.twitter.com/nolanknill" class="btn btn-sm btn-default"><i class="fa fa-twitter"></i> &nbsp; Daily Thoughts</a>	            			
-	            		</li>
-	            	</ul>
-	            </div>
-	        </div>
-          </div>
+		<section id="services">
+			<div class="container">
+				<h2>How Can I Help <span style="font-weight:600">You</span></h2>
+				<div class="row">
+					<div class="col-md-4">
+						<h3>Have a Problem That Needs Solving?</h3>
+					</div>
+					<div class="col-md-8">
+			    		<p>I can help solve your problems, because I'm a problem solver.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<h3>Have an Idea?</h3>
+					</div>
+					<div class="col-md-8">
+						<p>
+						Do you have an idea that needs the Frakenstein treatment? I can help <em>bring your idea to life</em></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<h3>Have an Unfinished Project?</h3>
+					</div>
+					<div class="col-md-8">
+						<p>I pride myself on being able to take over the most complex of existing projects, understanding what needs to be done, and delivering it to my clients.</p>
+					</div>
+				</div>
+			</div>
+	    </section>
 
-
-		<div id="portfolio">
-        	<a name="portfolio"></a>
-        	<h2>Portfolio</h2>
+	    <section id="portfolio" class="dark">
+	    	<h2>Portfolio</h2>
         	<ul>
         		<li>
         			<a href="http://www.survey-ninja.com">Survey-Ninja.com</a>
@@ -297,40 +169,14 @@
         		 	</ul>
         		 </li>
         	</ul>
-        </div>
-
-
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p class="social-icons">
-              	<a title="View Twitter Timeline" href="https://www.twitter.com/nolanknill">
-              		<i class="fa fa-twitter-square fa-3x"></i>
-              	</a> 
-              	<a title="View Github Profile" href="http://www.github.com/riprap">
-              		<i class="fa fa-github-square fa-3x"></i>
-              	</a> 
-              	<a title="View Linkedin Profile" href="https://www.linkedin.com/profile/view?id=236671732">
-              		<i class="fa fa-linkedin-square fa-3x"></i>
-              	</a>
-              	<a title="View Steam Profile" href="http://steamcommunity.com/profiles/76561198050807637">
-              		<i class="fa fa-steam-square fa-3x"></i>
-              	</a>
-              	<a title="View stackoverflow Profile" href="http://stackoverflow.com/users/1281127/nolan-knill">
-              		<i class="fa fa-stack-overflow fa-3x"></i>
-              	</a>
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    </section>
+	    <section id="testimonials">
+	    	TESTIMONIALS
+	    </section>
+	    <section id="contact" class="dark">
+	    	CONTACT
+	    </section>
+	  </div>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
