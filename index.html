@@ -11,166 +11,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
-    <style>
-	    #portfolio{
-	    	margin-top:50px;
-	    	display:none;
-	    }
+    <link href="css/style.css" rel="stylesheet">
 
-	    #portfolio a{
-	    	text-decoration: underline;
-	    }
-
-	    #portfolio > ul > li{
-	    	margin-bottom:10px;
-	    }
-		div.site-wrapper { 
-			background: url(images/ocean-background.jpg); 
-			font-family: 'Open Sans', sans-serif;
-		}
-		.learn-more, .view-portfolio{
-			display:none;
-			margin-top:10px;
-		}
-		button, a.btn{
-			font-family: 'Open Sans Semibold', sans-serif;
-		}
-		h2.description{
-			display:none;
-		}
-		h3.masthead-brand{
-			background-image: url(images/headshot-small.png);
-			background-position: 50% 50%;
-		    background-repeat: no-repeat;
-		    -webkit-border-radius: 50%;
-			-moz-border-radius: 50%;
-		    border-radius: 50%;
-		    border-color:#FF5D01;
-		    width: 100px;
-		    height: 100px;
-		    border-style:solid;
-		    border-width:0.05em;
-		}
-		li{
-			list-style-type:none;
-			text-align:left;
-		}
-		div.learn-more.row{
-			margin-top:15px;
-		}
-		div.category > p{
-			text-align:left;
-		}
-		p.social-icons > a{
-			margin-left:10px;
-		}
-
-		/* On button hover, give a border color*/ 
-		.btn:hover{
-			border-color:#FF5D01;
-		}
-
-		/* On nav hover, and active nav, give the bottom border an orange*/
-		ul.masthead-nav > li > a:hover,
-		ul.masthead-nav > li.active > a,
-		ul.masthead-nav > li.active > a:hover
-		{
-			border-bottom-color: #FF5D01;
-		}
-
-		.btn:hover,								/* all button hovers */
-		i.fa-spinner,							/* Spinner on more info load */
-		ul.masthead-nav > li > a:hover,			/* Hover on top nav element changes to orange */
-		p.social-icons > a:hover > i:before { 	/* all icons change to orange on hover */
-			color:#FF5D01;
-		}
-
-		p.social-icons > a:hover > i { /*Make social icons bigger on hover*/
-			font-size:50px;
-		}
-		/* No underline on hover */
-		p.social-icons > a:hover{
-			text-decoration:none;
-		}
-
-		div.category > i{
-			background-color:#fff;
-			color: #FF5D01;
-			padding:25px;
-			border-radius:50%;
-			margin-bottom:10px;
-		}
-
-		div.category ul li{
-			margin-top:10px;
-			text-align:center;
-		}
-
-		div.category ul li.cta{
-			 margin-top:15px;
-			 text-align:center;
-		}
-		
-		div.category > ul > li > i{
-			display:none;
-		}
-
-		div.category hr{
-			margin:0px;
-			border-color: #FF5D01;
-		}
-		div.category{
-			margin-top:30px;
-		}
-		@media (min-width: 992px) {
-			div.category ul li{
-				text-align:left;
-			}
-			div.category ul li i{
-				display:inline-block;
-			}
-		}
-		
-		.fa-ul{
-			margin-left:0;
-		}
-
-	</style>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.1.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			setTimeout(function(){
-				$("h2.description").fadeIn(1500, function(){
-					setTimeout(function(){
-						$("button.learn-more").fadeIn(1500);
-						$("button.view-portfolio").fadeIn(1500);
-					}, 1000);
-				});
-			}, 1000);
-			
-			$("button.learn-more").click(function(){
-				$(this).hide(0, function(){
-					$("i.learn-more").fadeIn("slow", function(){
-						$("i.learn-more").fadeOut("slow", function(){
-							$("a.learn-more").css('display', 'inline-block');
-							$("div.learn-more").fadeIn("slow");
-						});
-					});
-				});
-			});
-			$(".view-portfolio").click(function(){
-				$("div#portfolio").fadeIn("slow");
-				$("ul.nav li.active").removeClass('active');
-				$("ul.nav > li > a.view-portfolio").parent("li").addClass('active');
-				$('button.view-portfolio').hide();
-			});
-		});
-	</script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -192,113 +41,105 @@
               <h3 class="masthead-brand"></h3>
               <ul class="nav masthead-nav">
                 <li class="active"><a href="#top">Home</a></li>
-                <li><a href="#portfolio" class="view-portfolio">Portfolio</a></li>
+                <li><a href="https://www.github.com/riprap">Github</a></li>
               </ul>
             </div>
           </div>
 
-          <div class="inner cover">
+          <div class="inner c">
             <h1 class="cover-heading">Hi, I'm Nolan Knill.</h1>
-            <h2 class="description">Web Developer and Sports Geek</h2>
+            <h2 class="description">Backend Web Developer</h2>
+          </div>
             
-            <button class="btn btn-lg btn-default learn-more">Learn More</button>
-            <button class="btn btn-lg btn-default view-portfolio">View Portfolio</button>
-            <a href="contact" class="btn btn-lg btn-default learn-more"><i class="fa fa-envelope"></i>  Contact Me</a>
-            <br/>
-            <i class="fa fa-spinner fa-spin fa-5x learn-more"></i>
+
             <div class="learn-more row">
-	            <div class="category col-md-5">
-	            	<i class="fa fa-laptop fa-4x"></i>
-	            	<h3>Software Development</h3>
-	            	<hr>
+	            <div class="category col-md-12">
+					<h3>Overview</h3><a name="#overview"></a>
+					<hr>
 	            	<ul class="fa-ul">
 	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			3 years professional web development experience in PHP, MySQL, Javascript, and HTML/CSS
+	            			4 years professional web development experience in PHP, MySQL, Javascript, and HTML/CSS
 	            		</li>
 	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Object-oriented development (extensive use of Zend 1.12 and Symfony 1.4 PHP MVC Frameworks. Computer Programmer Analyst background)
+	            			Object-oriented development (extensive use of Zend Framework 1.12 and Zend Framework 2, and Symfony 1.4 PHP MVC Frameworks). Computer Programmer Analyst background
 	            		</li>
 	            		<li><i class="fa-li fa fa-wordpress"></i>
-	            			Freelance development experience in Wordpress</i>
+	            			Freelance development experience in Wordpress, Ruby on Rails, and EmberJS.</i>
 	            		</li>
 	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Professional experience with Python and Postgresql
-	            		</li>
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Working knowledge of Ruby on Rails
-	            		</li>
-	            		<li class="cta">
-	            			<a href="#portfolio" class="btn btn-sm btn-default"><i class="fa fa-folder-open"></i> &nbsp; View some of my work</a>	            			
-	            		</li>
-	            	</ul>
-	            </div>
-	            <div class="col-md-2"></div>
-	            <div class="category col-md-5">
-	            	<i class="fa fa-child fa-4x"></i>
-	            	<h3>Personal</h3>
-	            	<hr>
-	            	<ul class="fa-ul">
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Adult leaguer (soccer and basketball)
-	            		</li>
-	            		<li><i class="fa-li fa fa-gamepad"></i>
-	            			I refuse to believe anyone can beat me at FIFA 14
-	            		</li>
-	            		<li><i class="fa-li fa fa-check-square"></i>
-	            			Liverpool FC and Toronto Sports (Raptors > Blue Jays > Maple Leafs)
-	            		</li>
-	            		<li class="cta">
-	            			<a href="https://www.twitter.com/nolanknill" class="btn btn-sm btn-default"><i class="fa fa-twitter"></i> &nbsp; Daily Thoughts</a>	            			
+	            			Professional scripting experience with Python and Postgresql
 	            		</li>
 	            	</ul>
 	            </div>
 	        </div>
-          </div>
+          
 
+	      <div class="portfolio row">
+            <div class="category col-md-12">
+				<h3>Portfolio</h3><a name="#portfolio"></a>
+				<hr>
+	        	<ul class="fa-ul">
+	        		<li>
+	        			<a class="portfolio-item" href="http://www.motumb2b.com">motum b2b</a>
+	        			<ul class="more-info">
 
-		<div id="portfolio">
-        	<a name="portfolio"></a>
-        	<h2>Portfolio</h2>
-        	<ul>
-        		<li>
-        			<a href="http://www.survey-ninja.com">Survey-Ninja.com</a>
-        			<ul>
-        				<li>Site where users have the ability to take surveys, create surveys, save surveys, view results of surveys. Includes user authentication.
-        			 	<li>PHP project</li>
-        			 	<li>View code: <a href="http://www.github.com/riprap/Survey-Ninja"> Github Repo</a></li>
-        			 	<li>Currently being redone in Ruby on Rails: <a href="http://www.github.com/riprap/Survey-Ninja-Rails">Github Repo</a></li>
-        			 </ul>
-        		 </li>
-        		 <li>
-        		 	<a href="http://achimota-centre.herokuapp.com">Achimota Centre for Children with Autism</a>
-        		 	<ul>
-        		 		<li>Ruby on Rails project for the course Systems Project (8-months)</li>
-        		 		<li>Achimota Centre came to us with a problem when trying to save student's learning progress. This app helps teachers store and view progress of students in their programs.</li>
-        		 		<li>Full CRUD on students, test scores, progress</li> 
-        		 		<li>Private git repo used for collaboration of 4-person team</li>
-        		 	</ul>
-        		 <li>
-        		 	<a href="http://www.nutrafarms.ca">Nutrafarms.ca</a>
-        		 	<ul>
-        		 		<li>Freelance project done in Wordpress, using PHP/MySQL, Javascript, HTML/CSS</li>
-        		 	</ul>
-        		 </li>
-        		 <li>
-        		 	<a href="http://github.com/riprap/project-euler">Project Euler</a>
-        		 	<ul>
-        		 		<li>To expand my knowledge of Python, I completed 30 problems from the Project Euler problem set</li>
-        		 		<li>Problem set can be found at <a href="http://projecteuler.net/problems">www.projecteuler.net/problems</a></li>
-        		 		<li>View code: <a href="http://github.com/riprap/project-euler">Github Repo</a></li>
-        		 	</ul>		
-        		 </li>
-        		 <li>
-        		 	<a href="http://github.com/riprap/planet-defence">Planet Defence</a>
-        		 	<ul>
-        		 		<li>Video game made in Python</li>
-        		 		<li>View code: <a href="http://github.com/riprap/planet-defence">Github Repo</a></li>
-        		 	</ul>
-        		 </li>
-        	</ul>
+		        			<li>Technologies: PHP, Zend Framework 1.12, AngularJS, PhoneGap, SASS</li>
+		        			<li>Client work includes customized CMS', hybrid apps (iPad specifically), marketplaces, landing pages, and marketing automation integration, API creation & utilization for external apps</li>
+		        		</ul>
+	        		</li>
+
+	        		<li><i class="fa-li fa fa-github"></i>
+	        			<a class="portfolio-item" href="http://www.survey-ninja.com">Survey-Ninja.com:</a>
+	        			<ul class="more-info">
+	        				<li>Technology: PHP</li>
+	        				<li>Description: Site where users have the ability to take surveys, create surveys, save surveys, view results of surveys. Includes user authentication.</li>
+	        			 	<li><a href="http://www.github.com/riprap/Survey-Ninja">View Github Repo</a></li>
+	        			 	<li>Currently being redone in Ruby on Rails: <a href="http://www.github.com/riprap/Survey-Ninja-Rails">Github Repo</a></li>
+	        			 </ul>
+	        		 </li>
+	        		 <li><i class="fa-li fa fa-diamond"></i>
+	        		 	<a class="portfolio-item" href="http://www.bijouxbyamy.com">Bijoux By Amy:</a>
+	        		 	<ul class="more-info">
+	        		 		<li>Technology: Ruby on Rails, EmberJS</li>
+	        		 		<li>Work: Freelance project. Finished remaining leftover work for completion/launch of the site, including a customised admin panel for blog in Rails</li>
+	        		 		<li>This required me to learn the EmberJS Javascript MVC Framework</li>
+	        		 	</ul>
+	        		 </li>
+	        		 <li><i class="fa-li fa fa-github"></i>
+	        		 	<a class="portfolio-item" href="http://github.com/riprap/project-euler">Project Euler:</a>
+	        		 	<ul class="more-info">
+	        		 		<li>To expand my knowledge of Python, I completed 30 problems from the Project Euler problem set</li>
+	        		 		<li>Problem set can be found at <a href="http://projecteuler.net/problems">www.projecteuler.net/problems</a></li>
+	        		 		<li>Solutions: <a href="http://github.com/riprap/project-euler">View Github Repo</a></li>
+	        		 	</ul>		
+	        		 </li>
+	        		 <li><i class="fa-li fa fa-diamond"></i>
+	        		 	<a class="portfolio-item" href="http://achimota-centre.herokuapp.com">Achimota Centre for Children with Autism:</a>
+	        		 	<ul class="more-info">
+	        		 		<li>Technology: Ruby on Rails</li>
+	        		 		<li>Description: Achimota Centre came to us with a problem when trying to save student's learning progress. This app helps teachers store and view progress of students in their programs.</li>
+	        		 		<li>Full CRUD on students, test scores, progress</li> 
+	        		 		<li>Project lasted two semesters (8-months) for Systems Project I course</li>
+	        		 		<li>Private git repo used for collaboration of 4-person team</li>
+	        		 	</ul>
+	        		 </li>
+	        		 <li><i class="fa-li fa fa-wordpress"></i>
+	        		 	<a class="portfolio-item" href="http://www.nutrafarms.ca">Nutrafarms.ca:</a>
+	        		 	<ul class="more-info">
+	        		 		<li>Technology: PHP(Wordpress), HTML/CSS, Javascript (jQuery)</li>
+	        		 		<li>Work: Freelance project. Converted a PSD into a Wordpress theme with dynamic contact form creation</li>
+	        		 		<li>*EDIT: It appears as though the site has gone through a redesign since my initial work in 2012. <a href="https://web.archive.org/web/20141218004130/http://nutrafarms.ca/">Archived version of Nutrafarms.ca</a></li>
+	        		 	</ul>
+	        		 </li>
+	        		 <li><i class="fa-li fa fa-github"></i>
+	        		 	<a class="portfolio-item" href="http://github.com/riprap/planet-defence">Planet Defence:</a>
+	        		 	<ul class="more-info">
+	        		 		<li>Video game made in Python</li>
+	        		 		<li><a href="http://github.com/riprap/planet-defence">View Github Repo</a></li>
+	        		 	</ul>
+	        		 </li>
+	        	</ul>
+	        </div>
         </div>
 
 
@@ -314,9 +155,6 @@
               	</a> 
               	<a title="View Linkedin Profile" href="https://www.linkedin.com/profile/view?id=236671732">
               		<i class="fa fa-linkedin-square fa-3x"></i>
-              	</a>
-              	<a title="View Steam Profile" href="http://steamcommunity.com/profiles/76561198050807637">
-              		<i class="fa fa-steam-square fa-3x"></i>
               	</a>
               	<a title="View stackoverflow Profile" href="http://stackoverflow.com/users/1281127/nolan-knill">
               		<i class="fa fa-stack-overflow fa-3x"></i>

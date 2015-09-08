@@ -1,0 +1,148 @@
+.cover-container > .masthead {
+	position:relative;
+}
+
+.row a{
+	text-decoration: underline;
+}
+
+.portfolio a.portfolio-item {
+	text-decoration: none;
+	color: #FF5D01;
+}
+.portfolio a.portfolio-item:hover{
+	text-decoration:underline;
+} 
+
+.portfolio .more-info li {
+	list-style-type: initial;
+}
+
+div.site-wrapper { 
+	background: url(/images/ocean-background.jpg); 
+	font-family: 'Open Sans', sans-serif;
+}
+
+button, a.btn{
+	font-family: 'Open Sans Semibold', sans-serif;
+}
+
+h3.masthead-brand{
+	background-image: url(/images/headshot-small.png);
+	background-position: 50% 25%;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+    border-radius: 50%;
+    border-color:#FF5D01;
+    width: 150px;
+    height: 150px;
+    border-style:solid;
+    border-width:0.05em;
+}
+li{
+	list-style-type:none;
+	text-align:left;
+}
+div.row{
+	margin-top:15px;
+}
+
+div.row hr {
+	margin:0 20px;
+	border-color: #FF5D01;
+}
+
+div.row h3 {
+	text-align:left;
+	margin-bottom:5px;
+	padding-left:20px;
+}
+
+@media (min-width: 992px) {
+	div.row h3{
+		padding-left:0;
+	}
+	div.row hr {
+		margin:0;
+		padding:0;
+	}
+}
+
+
+div.category > p{
+	text-align:left;
+}
+p.social-icons > a{
+	margin-left:10px;
+}
+
+/* On button hover, give a border color*/ 
+.btn:hover{
+	border-color:#FF5D01;
+}
+
+/* On nav hover, and active nav, give the bottom border an orange*/
+ul.masthead-nav > li > a:hover,
+ul.masthead-nav > li.active > a,
+ul.masthead-nav > li.active > a:hover
+{
+	border-bottom-color: #FF5D01;
+}
+
+.btn:hover,								/* all button hovers */
+i.fa-spinner,							/* Spinner on more info load */
+ul.masthead-nav > li > a:hover,			/* Hover on top nav element changes to orange */
+p.social-icons > a:hover > i:before { 	/* all icons change to orange on hover */
+	color:#FF5D01;
+}
+
+/* No underline on hover */
+p.social-icons > a:hover{
+	text-decoration:none;
+}
+
+div.category > i{
+	background-color:#fff;
+	color: #FF5D01;
+	padding:25px;
+	border-radius:50%;
+	margin-bottom:10px;
+}
+
+div.category ul li{
+	font-size: 18px;
+	margin-top:10px;
+	text-align:center;
+}
+
+div.category ul li.cta{
+	 margin-top:15px;
+	 text-align:center;
+}
+
+div.category{
+	margin-top:30px;
+}
+
+div.category ul li{
+	text-align:left;
+	padding:0 20px;
+}
+div.category ul li i{
+	display:inline-block;
+}
+
+@media (min-width: 992px) {
+	div.category ul li{
+		padding:0px;
+	}
+}
+
+.fa-ul{
+	margin-left:0;
+}
+
+.fa-diamond {
+	color:  #981A21;
+}
