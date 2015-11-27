@@ -7,8 +7,9 @@
 }
 
 .portfolio a.portfolio-item {
+	font-weight: bold;
 	text-decoration: none;
-	color: #FF5D01;
+	color: #FD8008;
 }
 .portfolio a.portfolio-item:hover{
 	text-decoration:underline;
@@ -19,7 +20,7 @@
 }
 
 div.site-wrapper { 
-	background: url(/images/ocean-background.jpg); 
+	background: #fff;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -34,7 +35,7 @@ h3.masthead-brand{
     -webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
     border-radius: 50%;
-    border-color:#FF5D01;
+    border-color:#FD8008;
     width: 150px;
     height: 150px;
     border-style:solid;
@@ -50,7 +51,7 @@ div.row{
 
 div.row hr {
 	margin:0 20px;
-	border-color: #FF5D01;
+	border-color: #FD8008;
 }
 
 div.row h3 {
@@ -79,7 +80,7 @@ p.social-icons > a{
 
 /* On button hover, give a border color*/ 
 .btn:hover{
-	border-color:#FF5D01;
+	border-color:#FD8008;
 }
 
 /* On nav hover, and active nav, give the bottom border an orange*/
@@ -87,14 +88,14 @@ ul.masthead-nav > li > a:hover,
 ul.masthead-nav > li.active > a,
 ul.masthead-nav > li.active > a:hover
 {
-	border-bottom-color: #FF5D01;
+	border-bottom-color: #FD8008;
 }
 
 .btn:hover,								/* all button hovers */
 i.fa-spinner,							/* Spinner on more info load */
 ul.masthead-nav > li > a:hover,			/* Hover on top nav element changes to orange */
 p.social-icons > a:hover > i:before { 	/* all icons change to orange on hover */
-	color:#FF5D01;
+	color:#FD8008;
 }
 
 /* No underline on hover */
@@ -104,7 +105,7 @@ p.social-icons > a:hover{
 
 div.category > i{
 	background-color:#fff;
-	color: #FF5D01;
+	color: #FD8008;
 	padding:25px;
 	border-radius:50%;
 	margin-bottom:10px;
